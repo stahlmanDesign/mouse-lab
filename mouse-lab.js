@@ -1,3 +1,22 @@
+/*
+bc = breeding cage
+hc = housing cage
+a = male
+b = female
+
+homo = homozygus cross
+het+het = homozygus cross = het
+Lx = litter number
+AR = project
+genotype = wt / +/- hot / ko
+
+cage id
+R1_H_BC_1
+
+mouse id
+AR_Het_BC1_L1_B1
+*/
+
 var mouse = {
 	id: "ABC123",
 	genotype: "XYX789",
@@ -20,12 +39,12 @@ var mouse = {
 		"end": "19/07/2017"
 	}],
 	possiblePregancy: ["23/05/2017",
-	"23/07/2017"] // array of each possible pregnancy start date
+	"23/07/2017"] 					// array of each possible pregnancy start date
 }
 
 var cage = {
 	id: "CDE123",
-	type: "breeding",			// could also be housing
+	type: "breeding",				// could also be housing
 	spot1: [{
 		"id": "CDE123",
 		"start": "22/03/2017",
