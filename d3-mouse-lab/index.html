@@ -360,11 +360,16 @@
 	<!-- queue for deferring loaded data -->
 	<script src="http://d3js.org/queue.v1.min.js"></script>
 
+	<!-- Tabletop for reading from Google Spreadsheet -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"></script>
+
 	<script type="text/javascript">
 		var svg = d3.select("svg")
 		var circles = svg.selectAll(".cage")
 		var groups = svg.selectAll(".cage-groups g")
 		var texts = svg.selectAll(".cage-groups text");
+
+
 
 		setInterval(function() {
 			var randomInt = _.sample(_.range(90))
@@ -385,7 +390,7 @@
 				})
 				.attr("fill-opacity", 1)
 				// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
-				texts.data(data).exit().transition().attr("fill-opacity", 0) //.remove(); // exit cannot be chained to enter; also must tell which data join
+			texts.data(data).exit().transition().attr("fill-opacity", 0) //.remove(); // exit cannot be chained to enter; also must tell which data join
 
 		}
 

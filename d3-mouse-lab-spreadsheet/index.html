@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+
+	<!-- bootstrap css file -->
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+
+	<!-- fontawesome css file -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+	<!-- leaflet css -->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+
+	<!-- custom css -->
+	<style>
+		.cage {
+			fill: #cfd1d2;
+			stroke: #000;
+			stroke-miterlimit: 10;
+		}
+
+		.cage-breeding {
+			fill: #E9242D;
+		}
+
+		.cage-weening {
+			fill: #FFCD30;
+		}
+
+		.text-cageID {
+			font-family: 'MyriadPro-Regular';
+			font-size: 12px;
+		}
+
+		svg {
+			background: #e4dfca
+		}
+
+		.symbol-mouse {}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div id="content">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1500">
+				<symbol id="female" viewBox="-5.9 -8.8 11.9 17.6">
+					<g id="UwAT63_3_">
+						<g>
+							<path fill="#FF588F" d="M-2.3-0.1c-1-0.6-3.3-0.6-3.6,1.3C-6.1,2.7-5,3.3-3.9,3.6c1,0.3,0.7-0.4,1.2,1C-2.3,5.6-1.5,9,0,8.8
+				c1.4-0.2,2.5-4.2,2.7-5.2C4.3,4.4,6.3,3,5.9,1.2c-0.4-1.5-2.3-2-3.5-1.1c1.4-2.7,3-8.7-1.8-8.9C-4.6-9.1-3.5-3-2.3-0.1
+				C-2.6-0.2-3-1.9-2.3-0.1z" />
+						</g>
+					</g>
+				</symbol>
+				<symbol id="male" viewBox="-5.9 -8.8 11.9 17.6">
+					<g id="UwAT63_1_">
+						<g>
+							<path fill="#55A6D9" d="M-2.3-0.1c-1-0.6-3.3-0.6-3.6,1.3C-6.1,2.7-5,3.3-3.9,3.6c1,0.3,0.7-0.4,1.2,1C-2.3,5.6-1.5,9,0,8.8
+				c1.4-0.2,2.5-4.2,2.7-5.2C4.3,4.4,6.3,3,5.9,1.2c-0.4-1.5-2.3-2-3.5-1.1c1.4-2.7,3-8.7-1.8-8.9C-4.6-9.1-3.5-3-2.3-0.1
+				C-2.6-0.2-3-1.9-2.3-0.1z" />
+						</g>
+					</g>
+				</symbol>
+				<g>
+					<g>
+						<text transform="matrix(1 0 0 1 56 50.0439)" font-family="'MyriadPro-Regular'" font-size="12px">Breeding</text>
+						<rect x="27" y="40" fill="#FDC031" stroke="#000000" stroke-miterlimit="10" width="18" height="18" />
+					</g>
+					<g>
+						<text transform="matrix(1 0 0 1 184 50.0439)" font-family="'MyriadPro-Regular'" font-size="12px">Weening</text>
+						<text transform="matrix(1 0 0 1 286 50.0439)" font-family="'MyriadPro-Regular'" font-size="12px">Male</text>
+						<text transform="matrix(1 0 0 1 383.9996 50.0439)" font-family="'MyriadPro-Regular'" font-size="12px">Female</text>
+						<rect x="155" y="40" fill="#cfd1d2" stroke="#000000" stroke-miterlimit="10" width="18" height="18" />
+						<use class="symbol-mouse" xlink:href="#male" width="11.9" height="17.6" x="-5.9" y="-8.8" transform="matrix(1 0 0 -1 276.3962 48.8173)" overflow="visible" />
+						<use xlink:href="#female" width="11.9" height="17.6" x="-5.9" y="-8.8" transform="matrix(1 0 0 -1 373.1427 48.8173)" overflow="visible" />
+					</g>
+				</g>
+				<g class="cage-groups">
+					<g>
+						<circle class="cage" cx="52.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 13.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 43.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 43.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+
+					</g>
+					<g>
+						<circle class="cage" cx="146.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 107.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 137.7292 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 137.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="240.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 201.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 231.7292 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 231.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="334.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 295.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 325.7292 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 325.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="428.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 389.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 419.7292 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 419.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="522.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 483.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 513.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 513.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="616.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 577.8741 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 607.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 607.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="710.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 671.8741 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 701.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 701.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="804.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 765.8741 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 795.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 795.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="898.3" cy="114.7" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 859.8741 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 889.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 889.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+					<g>
+						<circle class="cage" cx="52.3" cy="253" r="33.1" />
+						<text class="text-cageID" transform="matrix(1 0 0 1 13.8742 329.2848)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+						<text class="text-rackID" transform="matrix(1 0 0 1 43.7291 344.2848)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+						<text class="text-circSize" transform="matrix(1 0 0 1 43.8135 255.977)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+					</g>
+
+				</g>
+
+			</svg>
+		</div>
+	</div>
+	<!-- reload browser when files change -->
+	<script type="text/javascript" src="http://livejs.com/live.js"></script>
+
+	<!-- jquery.min.js  -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- underscore javascript utility libirary -->
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+
+	<!-- bootstrap js file -->
+	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+	<!-- leaflet js -->
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
+	<!-- d3 -->
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+	<!-- queue for deferring loaded data -->
+	<script src="http://d3js.org/queue.v1.min.js"></script>
+
+	<!-- Tabletop for reading from Google Spreadsheet -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"></script>
+
+	<script type="text/javascript">
+		var svg = d3.select("svg")
+		var circles = svg.selectAll(".cage")
+		var groups = svg.selectAll(".cage-groups g")
+		var textsCageID = svg.selectAll(".text-cageID");
+		var textsRackID = svg.selectAll(".text-rackID");
+		var textsCircSize = svg.selectAll(".text-circSize");
+		// svg.selectAll(".symbol-mouse")
+		// .attr("visibility","hidden")
+		// https://docs.google.com/spreadsheets/d/1vF9_jg-rA8St_MHM4OTUOrHGVnwAx_-PmarKnJjZ11c/pub?output=tsv
+		var tabletop = Tabletop.init({
+			key: "1vF9_jg-rA8St_MHM4OTUOrHGVnwAx_-PmarKnJjZ11c",
+			callback: gotData
+		})
+
+		function gotData(data, tabletop) {
+
+			drawCircles(data["ALL CAGES"].elements)
+			drawGroups(data["ALL CAGES"].elements)
+			drawtextsCageID(data["ALL CAGES"].elements)
+			drawtextsRackID(data["ALL CAGES"].elements)
+			drawtextsCircSize(data["ALL CAGES"].elements)
+		}
+
+		function drawtextsCageID(data) {
+
+			textsCageID.data(data).enter().append("text")
+			textsCageID.attr("fill", function(d) {
+					return "grey"
+					return _.sample(["red", "green", "yellow", "blue", "gray"]);
+				})
+				.text(function(d, i) {
+					if (d) {
+						return d["NAME on CAGE"]
+					} else {
+						return i
+					}
+				})
+				.attr("fill-opacity", 1)
+				// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
+				//textsCageID.data(data).exit().transition().attr("fill-opacity", 0) //.remove(); // exit cannot be chained to enter; also must tell which data join
+
+		}
+
+		function drawtextsRackID(data) {
+
+			textsRackID.data(data).enter().append("text")
+			textsRackID.attr("fill", function(d) {
+
+					return _.sample(["red", "green", "yellow", "blue", "gray"]);
+				})
+				.text(function(d, i) {
+					if (d) {
+						return d["RACK"] + " " + d["RACK POSITION"]
+					} else {
+						return i
+					}
+				})
+				.attr("fill-opacity", 1)
+				// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
+				//textsCageID.data(data).exit().transition().attr("fill-opacity", 0) //.remove(); // exit cannot be chained to enter; also must tell which data join
+
+		}
+
+		function drawtextsCircSize(data) {
+
+			textsCircSize.data(data).enter().append("text")
+			textsCircSize.attr("fill", function(d) {
+
+					return _.sample(["red", "green", "yellow", "blue", "gray"]);
+				})
+				.text(function(d, i) {
+					if (d) {
+						return d["DAYS OLD"]
+					} else {
+						return i
+					}
+				})
+				.attr("fill-opacity", 1)
+				// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
+				//textsCageID.data(data).exit().transition().attr("fill-opacity", 0) //.remove(); // exit cannot be chained to enter; also must tell which data join
+
+		}
+
+
+		function drawGroups(data) {
+			groups.data(data)
+				.enter().append("g") // add circles if not enough
+
+			// groups.data(data)
+			// 	.attr("visibility", function(d, i) {
+			// 		if (i % 2) return "hidden"
+			// 	})
+
+
+			// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
+			// groups.data(data).exit().transition().attr("color", function(d) {
+			// 		return _.sample(["red", "green", "yellow", "blue", "gray"]);
+			// 	}) //.remove(); // exit cannot be chained to enter; also must tell which data join
+
+		}
+
+		function drawCircles(data) {
+			circles.data(data)
+				.enter().append("circle") // add circles if not enough
+
+
+
+			circles.transition() // apply changes to all
+				.attr("cx", function(d, i) {
+					var cx = d3.select(this).attr("cx");
+					var randomInt = _.sample(_.range(90))
+					return (cx * 1) // +_.sample(_.range(90))-_.sample(_.range(90)) ;
+				})
+				.attr("cy", function(d, i) {
+					var cy = d3.select(this).attr("cy");
+					return (cy * 1) //+ _.sample(_.range(30))
+				})
+				.attr("r", function(d, i) {
+					var res
+					if (d) {
+						//console.log(d)
+						res = d["DAYS OLD"] / 13
+					}
+					if (d["breeding"] === "TRUE") res = 25
+					return res;
+				})
+				.style("fill", function(d) {
+					console.log(d["breeding"])
+					if (d["breeding"] === "TRUE") return "#fbbe43"
+
+				})
+
+
+
+
+			// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
+			circles.data(data).exit().transition().attr("r", function(d) {
+					return 0;
+				}) //.remove(); // exit cannot be chained to enter; also must tell which data join
+
+		}
+	</script>
+
+</body>
+
+</html>
