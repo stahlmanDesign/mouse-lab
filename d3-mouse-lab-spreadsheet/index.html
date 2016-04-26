@@ -82,12 +82,11 @@
 					</g>
 				</g>
 				<g class="cage-groups">
-					<g>
+					<!-- <g>
 						<circle class="cage" cx="52.3" cy="114.7" r="33.1" />
 						<text class="text-cageID" transform="matrix(1 0 0 1 13.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
 						<text class="text-rackID" transform="matrix(1 0 0 1 43.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
 						<text class="text-circSize" transform="matrix(1 0 0 1 43.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-
 					</g>
 					<g>
 						<circle class="cage" cx="146.3" cy="114.7" r="33.1" />
@@ -148,7 +147,7 @@
 						<text class="text-cageID" transform="matrix(1 0 0 1 13.8742 329.2848)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
 						<text class="text-rackID" transform="matrix(1 0 0 1 43.7291 344.2848)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
 						<text class="text-circSize" transform="matrix(1 0 0 1 43.8135 255.977)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
+					</g> -->
 
 				</g>
 
@@ -182,7 +181,7 @@
 	<script type="text/javascript">
 		var svg = d3.select("svg")
 		var circles = svg.selectAll(".cage")
-		var groups = svg.selectAll(".cage-groups g")
+		var groups = svg.selectAll(".cage-groups")
 		var textsCageID = svg.selectAll(".text-cageID");
 		var textsRackID = svg.selectAll(".text-rackID");
 		var textsCircSize = svg.selectAll(".text-circSize");
@@ -195,12 +194,57 @@
 		})
 
 		function gotData(data, tabletop) {
+			var allCages = data["ALL CAGES"].elements;
+			console.log(allCages.length)
+			buildCages(allCages)
+				//
+				 drawCircles(allCages)
+				// drawGroups(allCages)
+				// drawtextsCageID(allCages)
+				// drawtextsRackID(allCages)
+				// drawtextsCircSize(allCages)
+		}
 
-			drawCircles(data["ALL CAGES"].elements)
-			drawGroups(data["ALL CAGES"].elements)
-			drawtextsCageID(data["ALL CAGES"].elements)
-			drawtextsRackID(data["ALL CAGES"].elements)
-			drawtextsCircSize(data["ALL CAGES"].elements)
+		function buildCages(data) {
+			// model
+			// <g>
+			// 	<circle class="cage" cx="52.3" cy="114.7" r="33.1" />
+			// 	<text class="text-cageID" transform="matrix(1 0 0 1 13.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
+			// 	<text class="text-rackID" transform="matrix(1 0 0 1 43.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
+			// 	<text class="text-circSize" transform="matrix(1 0 0 1 43.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
+			// </g>
+
+			var coordX = _.range(50, 960, 95); // _.range([start], stop, [step])
+
+
+
+			var grid = {
+				col: 1,
+				row: 0,
+				height: 115,
+				x: 0,
+				y: 0,
+				iteration: 0
+			}
+			groups.data(data)
+				.enter().append("g")
+				.attr("transform", function(d, i) {
+
+					var x = coordX[grid.iteration]
+					var y = grid.col * grid.height;
+					var translate = "translate(" + x + "," + y + ")"
+					grid.iteration += 1;
+					if (grid.iteration >= 10) {
+						grid.iteration = 0
+						grid.col += 1;
+					}
+					return translate;
+				})
+				.append("circle")
+				.attr("r", 35)
+				.style("fill", "#fea")
+				.attr("class","cage")
+
 		}
 
 		function drawtextsCageID(data) {
@@ -266,7 +310,6 @@
 
 		function drawGroups(data) {
 			groups.data(data)
-				.enter().append("g") // add circles if not enough
 
 			// groups.data(data)
 			// 	.attr("visibility", function(d, i) {
@@ -289,6 +332,7 @@
 
 			circles.transition() // apply changes to all
 				.attr("cx", function(d, i) {
+
 					var cx = d3.select(this).attr("cx");
 					var randomInt = _.sample(_.range(90))
 					return (cx * 1) // +_.sample(_.range(90))-_.sample(_.range(90)) ;
@@ -307,7 +351,7 @@
 					return res;
 				})
 				.style("fill", function(d) {
-					console.log(d["breeding"])
+					//console.log(d["breeding"])
 					if (d["breeding"] === "TRUE") return "#fbbe43"
 
 				})
