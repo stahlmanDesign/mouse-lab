@@ -48,6 +48,33 @@
 
 	<div class="container">
 		<div id="content">
+			&nbsp;
+			<div class="btn-toolbar" role="toolbar" aria-label="...">
+				<div class="btn-group" role="group" aria-label="...">
+					<div class="navbar-form">
+						<label>Circles</label>
+					</div>
+					<button id="button-circles-total-mice" type="button" class="button-circles btn btn-default active">Total number of mice</button>
+					<button id="button-circles-days-old" type="button" class="button-circles btn btn-default">Days old</button>
+				</div>
+				<div class="btn-group" role="group" aria-label="...">
+					<div class="navbar-form">
+						<label>Cage type</label>
+					</div>
+					<button id="button-cage-type-both" type="button" class="button-cage-type btn btn-default active">Both</button>
+					<button id="button-cage-type-breeding" type="button" class="button-cage-type btn btn-default">Breeding cages</button>
+					<button id="button-cage-type-weening" type="button" class="button-cage-type btn btn-default">Weening cages</button>
+				</div>
+				<!-- <div class="btn-group" role="group" aria-label="...">
+					<div class="navbar-form">
+						<label>File Name on Upload</label>
+					</div>
+					<button type="button" class="btn btn-default">Left</button>
+					<button type="button" class="btn btn-default">Middle</button>
+					<button type="button" class="btn btn-default">Right</button>
+				</div> -->
+			</div>
+			&nbsp;
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1500">
 				<symbol id="female" viewBox="-5.9 -8.8 11.9 17.6">
 					<g id="UwAT63_3_">
@@ -81,74 +108,8 @@
 						<use xlink:href="#female" width="11.9" height="17.6" x="-5.9" y="-8.8" transform="matrix(1 0 0 -1 373.1427 48.8173)" overflow="visible" />
 					</g>
 				</g>
-				<g class="cage-groups">
-					<!-- <g>
-						<circle class="cage" cx="52.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 13.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 43.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 43.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="146.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 107.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 137.7292 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 137.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="240.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 201.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 231.7292 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 231.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="334.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 295.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 325.7292 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 325.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="428.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 389.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 419.7292 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 419.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="522.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 483.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 513.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 513.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="616.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 577.8741 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 607.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 607.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="710.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 671.8741 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 701.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 701.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="804.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 765.8741 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 795.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 795.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="898.3" cy="114.7" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 859.8741 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 889.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 889.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g>
-					<g>
-						<circle class="cage" cx="52.3" cy="253" r="33.1" />
-						<text class="text-cageID" transform="matrix(1 0 0 1 13.8742 329.2848)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-						<text class="text-rackID" transform="matrix(1 0 0 1 43.7291 344.2848)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-						<text class="text-circSize" transform="matrix(1 0 0 1 43.8135 255.977)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-					</g> -->
-
+				<g class="group-main">
+					<!-- will be populated by data -->
 				</g>
 
 			</svg>
@@ -179,46 +140,23 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"></script>
 
 	<script type="text/javascript">
-		var svg = d3.select("svg")
-		var circles = svg.selectAll(".cage")
-		var groups = svg.selectAll(".cage-groups")
-		var textsCageID = svg.selectAll(".text-cageID");
-		var textsRackID = svg.selectAll(".text-rackID");
-		var textsCircSize = svg.selectAll(".text-circSize");
-		// svg.selectAll(".symbol-mouse")
-		// .attr("visibility","hidden")
 		// https://docs.google.com/spreadsheets/d/1vF9_jg-rA8St_MHM4OTUOrHGVnwAx_-PmarKnJjZ11c/pub?output=tsv
 		var tabletop = Tabletop.init({
 			key: "1vF9_jg-rA8St_MHM4OTUOrHGVnwAx_-PmarKnJjZ11c",
 			callback: gotData
 		})
 
-		function gotData(data, tabletop) {
-			var allCages = data["ALL CAGES"].elements;
-			console.log(allCages.length)
-			buildCages(allCages)
-				//
-				 drawCircles(allCages)
-				// drawGroups(allCages)
-				// drawtextsCageID(allCages)
-				// drawtextsRackID(allCages)
-				// drawtextsCircSize(allCages)
+		var svg;
+
+		function gotData(json, tabletop) {
+			var data = json["ALL CAGES"].elements;
+			buildCages(data);
 		}
 
 		function buildCages(data) {
-			// model
-			// <g>
-			// 	<circle class="cage" cx="52.3" cy="114.7" r="33.1" />
-			// 	<text class="text-cageID" transform="matrix(1 0 0 1 13.8742 190.9772)" font-family="'MyriadPro-Regular'" font-size="10px">ARC8HOMO_L1_A</text>
-			// 	<text class="text-rackID" transform="matrix(1 0 0 1 43.7291 205.9772)" font-family="'MyriadPro-Regular'" font-size="10px">1-8J</text>
-			// 	<text class="text-circSize" transform="matrix(1 0 0 1 43.8135 117.6695)" font-family="'MyriadPro-Regular'" font-size="12px">360</text>
-			// </g>
-
-			var coordX = _.range(50, 960, 95); // _.range([start], stop, [step])
-
-
 
 			var grid = {
+				rangeX: _.range(50, 960, 95), // _.range([start], stop, [step])
 				col: 1,
 				row: 0,
 				height: 115,
@@ -226,11 +164,15 @@
 				y: 0,
 				iteration: 0
 			}
-			groups.data(data)
+			svg = d3.select("svg");
+			var mainGroup = svg.select(".main-group");
+
+			var cageGroups = svg.selectAll(".cage-group").data(data)
 				.enter().append("g")
+				.attr("class", "cage-group")
 				.attr("transform", function(d, i) {
 
-					var x = coordX[grid.iteration]
+					var x = grid.rangeX[grid.iteration]
 					var y = grid.col * grid.height;
 					var translate = "translate(" + x + "," + y + ")"
 					grid.iteration += 1;
@@ -241,129 +183,132 @@
 					return translate;
 				})
 				.append("circle")
-				.attr("r", 35)
-				.style("fill", "#fea")
-				.attr("class","cage")
-
-		}
-
-		function drawtextsCageID(data) {
-
-			textsCageID.data(data).enter().append("text")
-			textsCageID.attr("fill", function(d) {
-					return "grey"
-					return _.sample(["red", "green", "yellow", "blue", "gray"]);
-				})
-				.text(function(d, i) {
-					if (d) {
-						return d["NAME on CAGE"]
-					} else {
-						return i
-					}
-				})
-				.attr("fill-opacity", 1)
-				// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
-				//textsCageID.data(data).exit().transition().attr("fill-opacity", 0) //.remove(); // exit cannot be chained to enter; also must tell which data join
-
-		}
-
-		function drawtextsRackID(data) {
-
-			textsRackID.data(data).enter().append("text")
-			textsRackID.attr("fill", function(d) {
-
-					return _.sample(["red", "green", "yellow", "blue", "gray"]);
-				})
-				.text(function(d, i) {
-					if (d) {
-						return d["RACK"] + " " + d["RACK POSITION"]
-					} else {
-						return i
-					}
-				})
-				.attr("fill-opacity", 1)
-				// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
-				//textsCageID.data(data).exit().transition().attr("fill-opacity", 0) //.remove(); // exit cannot be chained to enter; also must tell which data join
-
-		}
-
-		function drawtextsCircSize(data) {
-
-			textsCircSize.data(data).enter().append("text")
-			textsCircSize.attr("fill", function(d) {
-
-					return _.sample(["red", "green", "yellow", "blue", "gray"]);
-				})
-				.text(function(d, i) {
-					if (d) {
-						return d["DAYS OLD"]
-					} else {
-						return i
-					}
-				})
-				.attr("fill-opacity", 1)
-				// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
-				//textsCageID.data(data).exit().transition().attr("fill-opacity", 0) //.remove(); // exit cannot be chained to enter; also must tell which data join
-
-		}
-
-
-		function drawGroups(data) {
-			groups.data(data)
-
-			// groups.data(data)
-			// 	.attr("visibility", function(d, i) {
-			// 		if (i % 2) return "hidden"
-			// 	})
-
-
-			// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
-			// groups.data(data).exit().transition().attr("color", function(d) {
-			// 		return _.sample(["red", "green", "yellow", "blue", "gray"]);
-			// 	}) //.remove(); // exit cannot be chained to enter; also must tell which data join
-
-		}
-
-		function drawCircles(data) {
-			circles.data(data)
-				.enter().append("circle") // add circles if not enough
-
-
-
-			circles.transition() // apply changes to all
-				.attr("cx", function(d, i) {
-
-					var cx = d3.select(this).attr("cx");
-					var randomInt = _.sample(_.range(90))
-					return (cx * 1) // +_.sample(_.range(90))-_.sample(_.range(90)) ;
-				})
-				.attr("cy", function(d, i) {
-					var cy = d3.select(this).attr("cy");
-					return (cy * 1) //+ _.sample(_.range(30))
-				})
+				.attr("class", "cage-circle")
 				.attr("r", function(d, i) {
-					var res
-					if (d) {
-						//console.log(d)
-						res = d["DAYS OLD"] / 13
-					}
-					if (d["breeding"] === "TRUE") res = 25
+					var res = getRadiusNumMice(d, i)
 					return res;
 				})
-				.style("fill", function(d) {
-					//console.log(d["breeding"])
-					if (d["breeding"] === "TRUE") return "#fbbe43"
+				.style("fill", function(d, i) {
+					return getStyleBoth(d, i);
+				}) // default to both
+				.style("stroke", "gray")
 
+			svg.selectAll(".cage-group").data(data)
+				.append("text")
+				.attr("class", "text-cage-id")
+				.style("text-anchor", "middle")
+				.attr("x", 0)
+				.attr("y", -40)
+				.style("fill", "grey")
+				.style("font-size", "0.6em")
+				.text(function(d) {
+					return d["NAME on CAGE"]
 				})
 
+			svg.selectAll(".cage-group").data(data)
+				.append("text")
+				.attr("class", "text-rack-id")
+				.style("text-anchor", "middle")
+				.attr("x", 0)
+				.attr("y", -25)
+				.style("fill", "grey")
+				.text(function(d) {
+					return d["RACK"] + " " + d["RACK POSITION"]
+				})
+
+		}
+
+		d3.selectAll(".button-circles")
+			.on("click", function(e) {
+				var bc = d3.selectAll(".button-circles")
+
+				bc.classed("active", false)
+				var clicked = d3.select(this)
+				clicked.classed("active", true)
+				updateCircles(clicked)
+			});
 
 
+		d3.selectAll(".button-cage-type")
+			.on("click", function(e) {
+				var bc = d3.selectAll(".button-cage-type")
+				bc.classed("active", false)
 
-			// take whatever is left over in the selection after the data length has reached its end, and affect the object. Remove will destory coordinates that you may want if you update with more data
-			circles.data(data).exit().transition().attr("r", function(d) {
-					return 0;
-				}) //.remove(); // exit cannot be chained to enter; also must tell which data join
+				var clicked = d3.select(this)
+				clicked.classed("active", true)
+				updateType(clicked)
 
+			});
+
+		function updateCircles(clicked) {
+			if (clicked[0][0].id == "button-circles-days-old") {
+				d3.selectAll("circle").transition().attr("r", function(d, i) {
+					return getRadiusDaysOld(d, i);
+				})
+			}
+
+			if (clicked[0][0].id == "button-circles-total-mice") {
+				d3.selectAll("circle").transition().attr("r", function(d, i) {
+					return getRadiusNumMice(d, i);
+				})
+			}
+		}
+
+		function getRadiusNumMice(d, i) {
+			var res = 0;
+			res = (d["numMales"] * 1) + (d["numFemales"] * 1) * 10;
+			if (isNaN(res) || res == undefined) {
+				res = 0;
+				console.log("bad number of mice around row " + i + "; maybe not a number?")
+			}
+			return res;
+		}
+
+		function getRadiusDaysOld(d, i) {
+			var res = 0;
+			res = (d["DAYS OLD"] * 1) / 10;
+			if (isNaN(res) || res == undefined) {
+				res = 0;
+				console.log("bad number of DAYS OLD around row " + i + "; maybe not a number?")
+			}
+			return res;
+		}
+
+		function updateType(clicked) {
+			if (clicked[0][0].id == "button-cage-type-both") {
+				d3.selectAll("circle").transition().style("fill", function(d, i) {
+					return getStyleBoth(d, i);
+				})
+			}
+
+			if (clicked[0][0].id == "button-cage-type-breeding") {
+				d3.selectAll(".cage-group").style("fill-opacity", function(d, i) {
+					return getStyleBreeding(d, i);
+				})
+			}
+
+			// if (clicked[0][0].id == "button-cage-type-weening") {
+			// 	d3.selectAll("circle").transition().attr("fill-opacity", function(d, i) {
+			// 		return getRadiusWeening(d, i);
+			// 	})
+			// }
+		}
+
+		function getStyleBoth(d, i) {
+			var res = "white"; // default, signifies error
+			if (d["breeding"] != "TRUE") res = "#cfd1d2"; // weening
+			if (d["breeding"] == "TRUE") res = "#fbbe43"; // breeding
+
+			return res;
+		}
+
+		function getStyleBreeding(d, i) {
+			var res = 0; // default
+
+			if (d["breeding"] != "TRUE") res = 0; // weening
+			if (d["breeding"] == "TRUE") res = 1; // breeding
+
+			return res;
 		}
 	</script>
 
