@@ -35,3 +35,6 @@ https://docs.google.com/spreadsheets/d/1E7yKQ6Y-BBFPflhdeJ28HpJrztQ_1oKIBAEJzeGh
 
 
 
+## Preview
+
+<img src="./preview.png"/>
